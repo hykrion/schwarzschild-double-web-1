@@ -10,7 +10,7 @@
 /**
   @brief  Calculate phi solving the ODE x'(y)
 */
-void
+static void
 calculate_phi_xy(void)
 {
   double l = ui_get_l();

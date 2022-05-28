@@ -124,6 +124,20 @@ phi_integration(double a,
   return status;
 }
 
+/**
+  @brief  Reverse phi vector
+*/
+static void
+phi_reverse(double *phi)
+{
+  double tmp[NODES];
+  int i;
+  for(i = 0; i < NODES; i++)
+    tmp[i] = phi[NODES - 1 - i];
+  for(i = 0; i < NODES; i++)
+    phi[i] = tmp[i];
+}
+
 /* -----------------------------------------------------------------------------
   PUBLIC
 ----------------------------------------------------------------------------- */
@@ -221,19 +235,6 @@ phi_integration_img(double a,
   return phi_integration(a, b, nodes, intParams, m_phiImg);
 }
 
-/**
-  @brief  Reverse phi vector
-*/
-void
-phi_reverse(double *phi)
-{
-  double tmp[NODES];
-  int i;
-  for(i = 0; i < NODES; i++)
-    tmp[i] = phi[NODES - 1 - i];
-  for(i = 0; i < NODES; i++)
-    phi[i] = tmp[i];
-}
 /**
   @brief  Short phiRea as if it were a forward integration
 */

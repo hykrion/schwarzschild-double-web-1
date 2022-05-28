@@ -26,7 +26,7 @@ double uiParams[UI_PARAM_SIZE];
           Por simplicidad estos parámetros están en modo texto en un fichero,
           parameters.txt, que tendrá un parámetro por cada línea.
   */
-void readParams(double uiParams[])
+void readParams(double uiparams[])
 {
   char str[UI_PARAM_SIZE][UI_PARAM_LEN];
 
@@ -50,7 +50,7 @@ void readParams(double uiParams[])
   i = 0;
   while(i < UI_PARAM_SIZE)
   {
-    uiParams[i] = atof(str[i]);
+    uiparams[i] = atof(str[i]);
     i++;
   }
 }

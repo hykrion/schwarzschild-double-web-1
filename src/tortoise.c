@@ -158,12 +158,6 @@ tortoise_get_xy(void)
   return m_xy;
 }
 
-TPoint2D
-tortoise_get_xy_i(int i)
-{
-  return m_xy[i];
-}
-
 /**
   @brief  Analytical yx result from [-inf, inf]
 */
